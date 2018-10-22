@@ -1,0 +1,301 @@
+ @import "../variables";
+.description-image {
+    img {
+        float: right;
+    }
+}
+
+section.content {
+    margin-top: 70px;
+}
+.top-left-section{
+    position: relative;
+    border-bottom: 1px solid $bottom-border-color;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 17%;
+        right: -12%;
+        background-image: url(/assets/images/dot-img.png);
+        min-height: 500px;
+        width: 100px;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
+.important-iq {
+    h3{
+        font-size: 30px;
+        font-family: $poppin;
+        font-weight: 400;
+        margin-bottom: 30px;    
+    }
+    p{
+        font-family: $poppin;
+        font-size: $text-fontsize;
+        line-height: $text-lineheight;
+        color: $text-color;
+    }
+    &::before {
+        content: '';
+        width: 10%;
+        background: #f5f5f5;
+        height: 7px;
+        position: absolute;
+        top: -20px;
+        left: -14px;
+    }
+    &::after {
+        content: '';
+        height: 17%;
+        background: #f5f5f5;
+        width: 7px;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+    }
+}
+}
+.important-iq-description{
+    p{
+        font-family: $poppin;
+        font-size: $text-fontsize;
+        line-height: $text-lineheight;
+        color: $text-color;
+    }
+}
+
+.comment-area {
+    position: relative;
+    &::after{
+    position: absolute;
+    content: '';
+    width: 90%;
+    height: 1px;
+    border-bottom: 1px solid $border-color; 
+    right: 0;
+    bottom:-30px
+    }
+    .col-md-2{
+        max-width: 10.666667%;
+    }
+}
+.comment-detail{
+    h4{
+        font-family: $playfair;
+        font-size: $text-fontsize;
+        line-height: $text-lineheight;
+        font-weight: 700;
+    }
+    span{
+        font-family: $poppin;
+        font-size: $comment-info-font-size;
+        line-height: $text-lineheight;
+        color: $text-color;
+        i{
+            font-style: inherit;
+            margin: 0 15px;
+        }
+    }
+}
+.reply-info{
+    flex-direction: column;
+}
+.reply{
+    border-bottom: 1px solid $border-color;
+    .col-md-2{
+        max-width: 10.666667%;
+    }
+  @extend .comment-detail;
+  .reply-detail{
+      
+      img{
+          height: 60px;
+      }
+  }
+  .reply-img{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+}
+.form-header {
+    text-align: center;
+    h2{
+        font-family: $playfair;
+        font-size: $form-heading-fontsize;
+        line-height: $text-lineheight;
+        font-weight: 700;
+    }
+    p{
+        font-family: $poppin;
+        font-size: $form-textsize;
+        line-height: $text-lineheight;
+        color: $text-color;
+    }
+}
+
+.comment-editor-form {
+    background: #efefef;
+}
+.comment-form{
+    input{
+        min-height: 50px;
+        border-radius: unset;
+        color: $form-input-color;
+        font-size: $form-input-fontsize;
+    }
+    textarea{
+        border-radius: unset;
+        color: $form-input-color;
+        font-size: $form-input-fontsize;
+        line-height: $form-input-lineheight;
+    }
+    span{
+        float: right;
+        text-transform: uppercase;
+    }
+    button{
+        padding: 10px 30px;
+        border-radius: unset;
+        padding: 10px 40px !important;
+        background-color: $form-btn-bgcolor;
+        font-size: $form-btn-fontsize;
+        font-family: $poppin;
+        color: $form-btn-color;
+    }
+}
+.next-previous{
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span{       
+        font-family: $poppin;
+        font-weight: 600;
+        font-size: $np-font-size;
+        text-transform: uppercase;
+        a{
+            text-decoration: none;
+            color:black;
+        }   
+   
+    }
+
+    span.np-left{
+        position: relative;
+        margin-left: 5%;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: -30px;
+            background-image: url(/assets/images/left-icon.png);
+            height: 100px;
+            width: 100px;
+            background-repeat: no-repeat;
+        }
+    }
+
+    span.np-right{
+        position: relative;
+        margin-right: 5%;
+        &::before{
+            content: "";
+            position: absolute;
+            top: 20%;
+            left: 85px;
+            background-image: url(/assets/images/right-icon.png);
+            height: 100px;
+            width: 100px;
+            background-repeat: no-repeat;
+        }
+    }
+    
+}
+.profile-section{
+    .profile-image{
+        text-align: center;
+    }
+.profile-name{
+    h2{
+        font-family: $playfair;
+        font-weight: 700;
+        font-size: $profile-font-size;
+        text-align: center;
+    }
+    span{
+        color: $profile-color;
+    }
+}
+.about-profile{
+    p{
+        font-family: $playfair;
+        font-size: $profile-textfont;
+        line-height: $text-lineheight;
+    }
+}
+.profile-signature{
+    text-align: right;
+}
+}
+
+.newsletter{
+    background-color: $form-bgcolor;
+   @extend .form-header;
+    .newsform{
+        text-align: center;
+        button{
+            padding: 10px 30px;
+            border-radius: unset;
+            padding: 10px 40px !important;
+            background-color: $form-btn-bgcolor;
+            font-size: $form-btn-fontsize;
+            font-family: $poppin;
+            color: $form-btn-color;
+        }
+        input{
+            min-height: 50px;
+            border-radius: unset;
+            color: $form-input-color;
+            font-size: $form-input-fontsize;
+        }
+    }
+}
+.top-picks{
+    h2{
+        font-family: $playfair;
+        font-weight: 700;
+        font-size: $form-heading-fontsize;
+    }
+    .picks-info{
+        flex-direction: column;
+        h4{
+            font-size: $picks-SubHeadingText;
+            font-family: $playfair;
+            line-height: $picks-SubHeadingTextLineHieght;
+        }
+        span{
+            font-size: $np-font-size;
+            font-family: $playfair;
+            position: relative;
+            margin-left: 25%;
+            color: $picks-border-color;
+
+            &::after{
+                position: absolute;
+                content: '';
+                width: 28%;
+                height: 1px;
+                left: -32%;
+                top: 50%;
+                background: $picks-border-color;
+            }
+        }
+    }
+    .picks-detail{
+        .col-md-8{
+            padding-left: 0;
+        }
+    }
+   
+}
